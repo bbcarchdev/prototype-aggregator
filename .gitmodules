@@ -1,0 +1,15 @@
+[submodule "eregansu"]
+	path = eregansu
+	url = git://github.com/nexgenta/eregansu.git
+[submodule "app/trove"]
+	path = app/trove
+	url = git@github.com:copuca/trove.git
+[submodule "app/troveview"]
+	path = app/troveview
+	url = git@github.com:copuca/troveview.git
+[submodule "app/wikipedia"]
+	path = app/wikipedia
+	url = git@github.com:copuca/wikipedia.git
+[submodule "app/geonames"]
+	path = app/geonames
+	url = git@github.com:copuca/geonames.git

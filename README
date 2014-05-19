@@ -1,0 +1,51 @@
+This is a metaproject for the DPS aggregator. Once you've checked it out, you'll
+need to initialise and update the submodules:
+
+$ git submodule update --init
+
+Next, create a placeholder configuration:
+
+$ ./cli install
+
+When prompted, enter 'dps-aggregator' as the application name. Other defaults
+should be fine.
+
+Next, modify config/config.<instance-name>.php to suit your setup. 
+
+You should uncomment the line which reads:
+
+/* define('TROVE_IRI', 'mysql://username:password@localhost/trove'); */
+
+And modify the database URI to suit your configuration. You will need to
+create an empty database which the specified credentials are able to access,
+but you don't need to create any tables. To do that, run:
+
+$ ./cli setup
+
+You may also wish to enable more verbose output when errors occur by adding
+the following to your config/config.<instance-name>.php:
+
+define('EREGANSU_DEBUG', true);
+
+Finally, you should configure your web server to expose the application. The
+'public' directory is the virtual host's document root. Sample configuration
+is provided near the end of the 'install' script, but you may wish to adjust
+this (in particular, the default configuration uses public/.htaccess to
+specify the rules for mod_rewrite, but you may prefer to specify "AllowOverride
+none" and move these rules into the virtual host configuration instead).
+
+-- 
+
+Copyright 2011 BBC.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

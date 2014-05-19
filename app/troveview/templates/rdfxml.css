@@ -1,0 +1,41 @@
+/* styles for XSL-processed XML API */
+
+html { font-family: 'Lucida Grande', Arial, Helvetica, sans-serif; font-size: 73.5%; }
+
+a { text-decoration: none; color: #007; }
+a:hover, a:active { text-decoration: underline; }
+
+div#main {
+    white-space: pre;
+}
+
+.indent {
+    margin-left: 1em;
+}
+
+.start-tag, .end-tag {
+    color: purple;
+    font-weight: bold;
+}
+
+.text {
+    font-weight: normal;
+}
+
+.attribute-name {
+    color: black;
+    font-weight: bold;
+}
+
+.attribute-value, .attribute-quote {
+    color: blue;
+    font-weight: normal;
+}
+
+/* pseudo hover used because IE6 and below don't understand :hover :( */
+.pseudo-hover {
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+}
